@@ -10,8 +10,6 @@ test("renders no missions and then renders 3 missions on rerendering", ()=> {
     //Arrange 1
     const { rerender } = render(<MissionsList missions={[]}/>);
 
-    console.log(renderStuff);
-
     //Act 1
     let missions = screen.queryAllByTestId('mission');
     //Assert 1
@@ -19,7 +17,9 @@ test("renders no missions and then renders 3 missions on rerendering", ()=> {
 
     //Arrange 2
     rerender(<MissionsList missions={[
-        {mission_id:1, mission_name: "Test 1"}
+        {mission_id:1, mission_name: "Test 1"},
+        {mission_id:2, mission_name: "Test 2"},
+        {mission_id:3, mission_name: "Test 3"}
     ]}/>)
 
     //Act 3
