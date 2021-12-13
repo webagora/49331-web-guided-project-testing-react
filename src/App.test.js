@@ -15,7 +15,9 @@ test("Renders all missions that are returned from fetchMissions", ()=>{
     //  1. find button
     //  2. click button
     const button = screen.getByRole('button');
-    
+    userEvent.click(button);
+
     //Assert:
     //  get all items with testid mission and check for 10 missions
+    const missions = screen.queryAllByTestId("mission");
 });
