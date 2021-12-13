@@ -8,6 +8,13 @@ test("renders without error", ()=> {
 
 
 test("renders loading message if isFetchingData is true", ()=> {
+    //Arrange : render the component to the screen
+    render(<MissionForm/>);
+    //Act
+    //Assert
+});
+
+test("renders button if isFetchingData is false", ()=> {
 
 });
 
