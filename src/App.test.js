@@ -20,4 +20,5 @@ test("Renders all missions that are returned from fetchMissions", ()=>{
     //Assert:
     //  get all items with testid mission and check for 10 missions
     const missions = screen.queryAllByTestId("mission");
+    expect(missions).toHaveLength(10);
 });
