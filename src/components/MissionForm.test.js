@@ -16,10 +16,8 @@ test("renders loading message if isFetchingData is true", ()=> {
     const button = screen.queryByRole('button');
 
     //Assert : does the message exist
-    expect(message).toHaveTextContent('we are fetching data');
-    expect(message).toBeTruthy();
     expect(message).toBeInTheDocument();
-    expect(message).not.toBeFalsy();
+    expect(button).not.toBeInTheDocument();
 });
 
 test("renders button if isFetchingData is false", ()=> {
