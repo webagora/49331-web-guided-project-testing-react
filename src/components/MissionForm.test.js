@@ -10,3 +10,8 @@ test("renders without error", ()=> {
 test("renders loading message if isFetchingData is true", ()=> {
 
 });
+
+test("executes getData when the button is clicked", ()=> {
+
+});
+
