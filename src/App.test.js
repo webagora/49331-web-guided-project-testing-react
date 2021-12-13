@@ -19,16 +19,16 @@ test("Renders all missions that are returned from fetchMissions", async () => {
             {mission_id: 3, mission_name: "test 3"},
         ]
     });
-
-
+    
     //Arrange: render our App component
     render(<App/>);
-
+    
     //Act:
     //  1. find button
     //  2. click button
     const button = screen.getByRole('button');
     userEvent.click(button);
+
 
     //Assert:
     //  get all items with testid mission and check for 10 missions
