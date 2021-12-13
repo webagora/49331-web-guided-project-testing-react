@@ -7,7 +7,7 @@ test("renders without errors", ()=> {
     render(<App />);
 });
 
-test("Renders all missions that are returned from fetchMissions", ()=>{
+test("Renders all missions that are returned from fetchMissions", async () => {
     //Arrange: render our App component
     render(<App/>);
 
