@@ -33,7 +33,7 @@ test("renders button if isFetchingData is false", ()=> {
 
 test("executes getData when the button is clicked", ()=> {
     const mockGetData = jest.fn(()=> {
-        console.log("hasdfas");
+        return "warren"
     });
 
     //Arrange : Render component with isFetchingData = false
