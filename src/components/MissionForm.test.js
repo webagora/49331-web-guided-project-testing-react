@@ -34,8 +34,10 @@ test("renders button if isFetchingData is false", ()=> {
 test("executes getData when the button is clicked", ()=> {
     //Arrange : Render component with isFetchingData = false
     render(<MissionForm isFetchingData={false}/>);
-    
-    //Act :
+
+    //Act : get the button. click the button
+    const button = screen.getByRole('button');
+
     //Assert :
 });
 
