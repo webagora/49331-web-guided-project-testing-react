@@ -6,3 +6,8 @@ import App from './App';
 test("renders without errors", ()=> {
     render(<App />);
 });
+
+test("Renders all missions that are returned from fetchMissions", ()=>{
+    //Arrange: render our App component
+    //Act 
+});
