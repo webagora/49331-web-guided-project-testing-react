@@ -19,6 +19,7 @@ test("Renders all missions that are returned from fetchMissions", async () => {
 
     //Assert:
     //  get all items with testid mission and check for 10 missions
-    const missions = screen.queryAllByTestId("mission");
-    expect(missions).toHaveLength(10);
+    const missions = await screen.findAllByTestId("mission");
+    console.log(missions);
+    // expect(missions).toHaveLength(10);
 });
