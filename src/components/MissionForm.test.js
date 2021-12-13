@@ -45,5 +45,6 @@ test("executes getData when the button is clicked", ()=> {
 
     //Assert : ????
     console.log(mockGetData.mock);
+    
 });
 
