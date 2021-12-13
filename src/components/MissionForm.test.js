@@ -42,7 +42,8 @@ test("executes getData when the button is clicked", ()=> {
     userEvent.click(button);
 
     //Assert : ????
-    console.log(mockGetData.mock);
     expect(mockGetData.mock.calls.length).toBe(1);
+    expect(mockGetData.mock.calls).toHaveLength(1);
+    expect(mockGetData).toBeCalled();
 });
 
