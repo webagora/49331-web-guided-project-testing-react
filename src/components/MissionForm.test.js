@@ -37,7 +37,8 @@ test("executes getData when the button is clicked", ()=> {
 
     //Act : get the button. click the button
     const button = screen.getByRole('button');
+    userEvent.click(button);
 
-    //Assert :
+    //Assert : ????
 });
 
