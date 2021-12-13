@@ -38,7 +38,7 @@ test("executes getData when the button is clicked", ()=> {
 
     //Arrange : Render component with isFetchingData = false
     render(<MissionForm isFetchingData={false} getData={()=> {
-        mockGetData(Math.random());
+        mockGetData(Math.random(), Math.random(), Math.random());
     }}/>);
 
     //Act : get the button. click the button
