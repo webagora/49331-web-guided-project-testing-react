@@ -9,5 +9,9 @@ test("renders without errors", ()=> {
 
 test("Renders all missions that are returned from fetchMissions", ()=>{
     //Arrange: render our App component
-    //Act 
+    //Act:
+    //  1. find button
+    //  2. click button
+    //Assert:
+    //  
 });
