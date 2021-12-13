@@ -42,6 +42,6 @@ test("executes getData when the button is clicked", ()=> {
     userEvent.click(button);
 
     //Assert : ????
-    
+    console.log(mockGetData.mock);
 });
 
