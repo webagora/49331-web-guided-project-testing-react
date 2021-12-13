@@ -41,9 +41,10 @@ test("executes getData when the button is clicked", ()=> {
     const button = screen.getByRole('button');
     userEvent.click(button);
 
-    //Assert : ????
+    //Assert : Check that the mock was called 1 time.
     expect(mockGetData.mock.calls.length).toBe(1);
     expect(mockGetData.mock.calls).toHaveLength(1);
     expect(mockGetData).toBeCalled();
+    expect(mockGetData).toBeCalledTimes(1);
 });
 
