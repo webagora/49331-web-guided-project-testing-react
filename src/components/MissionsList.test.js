@@ -18,6 +18,10 @@ test("renders no missions and then renders 3 missions on rerendering", ()=> {
     expect(missions).toHaveLength(0);
 
     //Arrange 2
+    rerender(<MissionsList missions={[
+        {mission_id:1, mission_name: "Test 1"}
+    ]}/>)
+
     //Act 3
     //Assert 3
     
