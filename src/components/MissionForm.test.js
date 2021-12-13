@@ -6,3 +6,7 @@ test("renders without error", ()=> {
     render(<MissionForm/>);
 });
 
+
+test("renders loading message if isFetchingData is true", ()=> {
+
+});
