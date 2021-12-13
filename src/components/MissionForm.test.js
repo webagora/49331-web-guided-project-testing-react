@@ -13,8 +13,9 @@ test("renders loading message if isFetchingData is true", ()=> {
 
     //Act : query for my loading message
     const message = screen.queryByText(/we are fetching data/i);
-    console.log(message);
-    //Assert
+    
+    //Assert : does the message exist
+    expect(message).toHaveTextContent('we are fetching data');
 });
 
 test("renders button if isFetchingData is false", ()=> {
