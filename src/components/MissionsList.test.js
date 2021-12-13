@@ -12,6 +12,7 @@ test("renders no missions and then renders 3 missions on rerendering", ()=> {
 
     //Act 1
     let missions = screen.queryAllByTestId('mission');
+
     //Assert 1
     expect(missions).toHaveLength(0);
 
@@ -23,6 +24,8 @@ test("renders no missions and then renders 3 missions on rerendering", ()=> {
     ]}/>)
 
     //Act 3
+    missions = screen.queryAllByTestId('mission');
+
     //Assert 3
-    
+    expect(missions).toHaveLength(3);
 });
