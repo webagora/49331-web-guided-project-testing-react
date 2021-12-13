@@ -8,10 +8,10 @@ test("renders without errors", ()=> {
 
 test("renders no missions and then renders 3 missions on rerendering", ()=> {
     //Arrange 1
-    const renderStuff = render(<MissionsList missions={[]}/>);
+    const { rerender } = render(<MissionsList missions={[]}/>);
 
     console.log(renderStuff);
-    
+
     //Act 1
     let missions = screen.queryAllByTestId('mission');
     //Assert 1
