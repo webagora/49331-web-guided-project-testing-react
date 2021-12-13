@@ -12,7 +12,11 @@ test("renders without errors", ()=> {
 });
 
 test("Renders all missions that are returned from fetchMissions", async () => {
-    fetchMissions.
+    fetchMissions.mockResolvedValueOnce({
+        status: "complete"
+    });
+
+
     //Arrange: render our App component
     render(<App/>);
 
