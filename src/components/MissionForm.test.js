@@ -1,5 +1,6 @@
 import React from "react"
 import { render, screen } from '@testing-library/react'
+import userEvent from "@testing-library/user-event"
 import MissionForm from "./MissionForm"
 
 test ( "render wothout error", () => {
@@ -31,7 +32,18 @@ test("renders button if isFetchingData is false", ()=> {
     expect(button).toBeInTheDocument();
 });
 
-// test ("executes getData when the button is clicked", () => {
+test ("executes getData when the button is clicked", () => {
+    const fakeGetData = () => {
+        console.log('We are getting data! Sure we are...')
+    }
+    //Arrange : Render component with isFetchingData = false
+    render (<MissionForm isFetchingData={false} getData ={ fakeGetData } />)
 
-// })
+    //Act : get the button. click the button
+    const button = screen.getByRole('button');
+    userEvent.click(button);
+
+    //Assert : Check that the mock was called 1 time.
+
+})
 
