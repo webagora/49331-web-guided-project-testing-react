@@ -16,6 +16,9 @@ test("renders loading message if isFetchingData is true", ()=> {
     
     //Assert : does the message exist
     expect(message).toHaveTextContent('we are fetching data');
+    expect(message).toBeTruthy();
+    expect(message).toBeInTheDocument();
+    expect(message).not.toBeFalsy();
 });
 
 test("renders button if isFetchingData is false", ()=> {
