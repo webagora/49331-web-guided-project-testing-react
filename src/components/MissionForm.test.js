@@ -11,9 +11,8 @@ test ("renders loading message if isFetchingData is true", () => {
     render (<MissionForm isFetchingData = { true } />)
     //Act : query for my loading message
     const message = screen.queryByText(/we are fetching data/i)
-    const button = screen.queryByRole('button')
+    const button = screen.queryByRole('button')    
     
-    console.log('message: ', message)
     //Assert : does the message exist
     expect(message).toBeInTheDocument()
     expect(message).toHaveTextContent('we are fetching data')
@@ -22,9 +21,15 @@ test ("renders loading message if isFetchingData is true", () => {
     expect(button).not.toBeInTheDocument()
 })
 
-// test ("renders button if isFetchingData is false", () => {
+test("renders button if isFetchingData is false", ()=> {
+    render(<MissionForm isFetchingData={false}/>);
 
-// })
+    const message = screen.queryByText(/we are fetching data/i);
+    const button = screen.queryByRole('button');
+
+    expect(message).not.toBeInTheDocument();
+    expect(button).toBeInTheDocument();
+});
 
 // test ("executes getData when the button is clicked", () => {
 
