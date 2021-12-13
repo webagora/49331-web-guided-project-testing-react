@@ -13,6 +13,7 @@ const MissionForm = props => {
       ) : (
         <button onClick={handleGetData}>Get Data</button>
       )}
+      <button onClick={handleGetData}>Get Data</button>
     </>
   );
 };
