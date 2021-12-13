@@ -11,8 +11,8 @@ test("renders loading message if isFetchingData is true", ()=> {
     //Arrange : render the component to the screen
     render(<MissionForm isFetchingData={true}/>);
 
-    //Act
-    
+    //Act : query for my loading message
+
     //Assert
 });
 
