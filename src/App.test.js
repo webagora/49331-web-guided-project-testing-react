@@ -14,9 +14,9 @@ test("renders without errors", ()=> {
 test("Renders all missions that are returned from fetchMissions", async () => {
     fetchMissions.mockResolvedValueOnce({
         data: [
-            {},
-            {},
-            {}
+            {mission_id: 1, mission_name: "test 1"},
+            {mission_id: 2, mission_name: "test 2"},
+            {mission_id: 3, mission_name: "test 3"},
         ]
     });
 
@@ -33,5 +33,5 @@ test("Renders all missions that are returned from fetchMissions", async () => {
     //Assert:
     //  get all items with testid mission and check for 10 missions
     const missions = await screen.findAllByTestId("mission");
-    expect(missions).toHaveLength(10);
+    expect(missions).toHaveLength(3);
 });
