@@ -33,24 +33,19 @@ test("renders button if isFetchingData is false", ()=> {
 });
 
 test ("executes getData when the button is clicked", () => {
-    const mockGetData = jest.fn((arg) => {
-        console.log('mockeGetData be clicked')
-        return arg 
-    });
+    const mockGetData = jest.fn()
        
     //Arrange : Render component with isFetchingData = false
-    render (<MissionForm isFetchingData={false} getData ={ () =>{ 
-        mockGetData (Math.random())
-    }} />)
+    render (<MissionForm isFetchingData={false} getData ={ mockGetData } />)
 
     //Act : get the button. click the button
     const button = screen.getByRole('button');
-    userEvent.click(button);
-    userEvent.click(button);
-    userEvent.click(button);
+    userEvent.click(button);    
 
-    //Assert : Check that the mock was called 1 time.
-    console.log('mockGetData: ', mockGetData.mock);
-
+    //Assert : Check that the mock was called 1 time.    
+    expect(mockGetData.mock.calls.length).toBe(1)
+    expect(mockGetData.mock.calls).toHaveLength(1)
+    expect (mockGetData).toBeCalled()
+    expect (mockGetData).toBeCalledTimes(1)
 })
 
