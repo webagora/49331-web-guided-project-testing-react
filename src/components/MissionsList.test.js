@@ -8,12 +8,19 @@ test ("renders without errors", () => {
 
 test("renders no missions and then renders 3 missions on rerendering", ()=> { 
     ///Arrange 1
-    render(<MissionsList missions={[]}/>);
+    const renderStuff = render(<MissionsList missions={[]}/>);
 
+    console.log('renderStuff: ', renderStuff);
     //Act 1
     let missions = screen.queryAllByTestId('mission');
 
     //Assert 1
     expect(missions).toHaveLength(0);
+    
+    //Arrange 2
+    
+    //Act 2
+    
+    //Assert 2
     
 })
