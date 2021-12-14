@@ -8,7 +8,6 @@ jest.mock('./api/fetchMissions')
 
 test ("renders without errors", () => {
     render (<App  />)
-
 })
 
 test("Renders all missions that are returned from fetchMissions", async () => {

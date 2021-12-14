@@ -13,8 +13,7 @@ export default function App() {
   const getData = () => {
     setIsFetchingData(true);
     fetchMissions()
-      .then(res => {
-        console.log('res: ', res);
+      .then(res => {        
         setIsFetchingData(false);
         setMissions(res.data);
       })
